@@ -1,0 +1,27 @@
+script.js
+
+const newsData = [
+  { title: "AI is Changing the World", category: "tech" },
+  { title: "New Smartphone Released", category: "tech" },
+  { title: "India Wins Cricket Match", category: "sports" },
+  { title: "Olympics 2024 Updates", category: "sports" }
+];
+
+const container = document.getElementById("news-container");
+
+function showNews(category) {
+  container.innerHTML = "";
+
+  const filteredNews = category === "all"
+    ? newsData
+    : newsData.filter(news => news.category === category);
+
+  filteredNews.forEach(news => {
+    const div = document.createElement("div");
+    div.className = "article";
+    div.innerHTML = `<h3>${news.title}</h3>`;
+    container.appendChild(div);
+  });
+}
+
+showNews("all");

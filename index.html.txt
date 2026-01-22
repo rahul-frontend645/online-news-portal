@@ -1,0 +1,25 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online News Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Online News Portal</h1>
+    <nav>
+      <button onclick="showNews('all')">All</button>
+      <button onclick="showNews('tech')">Technology</button>
+      <button onclick="showNews('sports')">Sports</button>
+    </nav>
+  </header>
+
+  <main id="news-container"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
